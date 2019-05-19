@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Boilerplate-revamp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Mukhammadjon Tajiboev">
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <link rel="preload" href="fonts/Eina-Bold/Eina-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Eina-Regular/Eina-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+
+<body>
+    <div style="max-width: 800px; margin: 0 auto">
+
+
+        <h3>Boilerplate <mark style="background-color: rebeccapurple; color: #fff">Revamp</mark></h3>
+        <h4>Automating simple HTML development workflow with Gulp.js</h4>
+        <hr>
+        <h4>How to use the boilerplate?</h4>
+        <ol>
+            <li><a href="https://github.com/Tajiboev/boilerplate-revamp.git">Download</a> from GitHub</li>
+            <li>Install Node Modules:
+                <pre><code style="padding: 5px">npm install</code></pre>
+            </li>
+            <li>(Development) Run:
+                <pre><code style="padding: 5px">gulp</code></pre>
+            </li>
+            <li>(Build) Run:
+                <pre><code style="padding: 5px">gulp build</code></pre>
+            </li>
+        </ol>
+        <hr>
+        <h4>Gulp tasks:</h4>
+
+        <div>
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>"default"</td>
+                    <td>Runs 'styles' and starts a server. Watches changes in <mark>.html</mark>, <mark>.sass</mark>
+                        and <mark>.js</mark> files</td>
+                </tr>
+                <tr>
+                    <td>"html"</td>
+                    <td>Minifies the <mark>.html</mark> file</td>
+                </tr>
+                <tr>
+                    <td>"serve:src"</td>
+                    <td>Starts a server using <mark>browser-sync</mark> </td>
+                </tr>
+                <tr>
+                    <td>"styles"</td>
+                    <td>Compile <mark>.sass</mark> files to <mark>.css</mark> (automatically prefix and minify)</td>
+                </tr>
+                <tr>
+                    <td>"scripts"</td>
+                    <td>Transpile, concat and uglify <mark>.js</mark> files</td>
+                </tr>
+                <tr>
+                    <td>"images"</td>
+                    <td>Resize all <mark>.jpg</mark> files in <mark>images/</mark> to 800, 1280 and 1920 pixels in
+                        <mark>.jpg</mark> & <mark>.webp</mark> formats</td>
+                </tr>
+            </table>
+        </div>
+        <div class="with-pic">
+            <!-- Example: using different images in different screen sizes -->
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!-- webp images: uncomment sources before 'build' -->
+
+                <source media="(max-width: 800px)" type="image/webp" srcset="images/image-800px.webp">
+                <source media="(max-width: 1979px)" type="image/webp" srcset="images/image-1280px.webp">
+                <source media="(min-width: 1980px)" type="image/webp" srcset="images/image.webp">
+
+                <!-- jpeg images: uncomment sources before 'build' -->
+                <source media="(max-width: 1979px)" srcset="images/image-1280px.jpg">
+                <source media="(max-width: 800px)" srcset="images/image-800px.jpg">
+                <!--[if IE 9]></video><![endif]-->
+                <img src="images/image.jpg" alt="Alt text">
+            </picture>
+        </div>
+    </div>
+    <br>
+    <footer style="padding: 0 0 20px 0">
+        <div style="text-align: center">Made with ❤️and ☕ by <a href="https://github.com/Tajiboev">Mukhammadjon
+                Tajiboev</a>
+        </div>
+    </footer>
+</body>
+
+<script src="scripts/main.js"></script>
+
+</html>
